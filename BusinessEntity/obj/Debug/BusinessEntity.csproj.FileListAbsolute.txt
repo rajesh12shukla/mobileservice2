@@ -1,0 +1,4 @@
+D:\freelance project\mom4.1\MobileService2\BusinessEntity\bin\Debug\BusinessEntity.dll
+D:\freelance project\mom4.1\MobileService2\BusinessEntity\bin\Debug\BusinessEntity.pdb
+D:\freelance project\mom4.1\MobileService2\BusinessEntity\obj\Debug\BusinessEntity.dll
+D:\freelance project\mom4.1\MobileService2\BusinessEntity\obj\Debug\BusinessEntity.pdb
