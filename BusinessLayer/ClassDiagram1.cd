@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLayer.BL_Contracts" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECQJBAJtgAAAAEAIIAkBCAAAAQEAICEAAAAAICjgAFA=</HashCode>
+      <FileName>BL_Contracts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BL_Customer" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIhRGAAooJA1BAAAAAAgAIAAAAAIoAwQBAhEAAAQAI=</HashCode>
+      <FileName>BL_Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BL_General" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKIAAAAAUQABAABABDAABAEAIFAAQAAhAAOFIAgAAQA=</HashCode>
+      <FileName>BL_General.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BL_MapData" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIADhAgAQiAACIAgCIBAAUIAhAAkgCAICsCBBCAIGA=</HashCode>
+      <FileName>BL_MapData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BL_User" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZhcimWtu6+aAdmjlvolwEfBsd3ixep06QNMehRMmYL0=</HashCode>
+      <FileName>BL_User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessEntity.Contracts" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessEntity.Customer" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessEntity.General" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessEntity.MapData" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessEntity.User" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

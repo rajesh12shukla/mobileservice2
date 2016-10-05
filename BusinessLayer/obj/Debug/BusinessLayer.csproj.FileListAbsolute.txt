@@ -1,0 +1,11 @@
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\BusinessEntity.dll
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\DataLayer.dll
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\BusinessEntity.pdb
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\bin\Debug\Microsoft.ApplicationBlocks.Data.pdb
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\freelance project\mom4.1\MobileService2\BusinessLayer\obj\Debug\BusinessLayer.pdb
