@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.eot');
+    src: url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../../Appearance/images/Login/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.eot');
+    src: url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../../Appearance/images/Login/fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #44A5D5 inset;
+    -webkit-text-fill-color: white;
+}
+input:focus:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #44A5D5 inset !important; }
+
+input, textarea, select { -webkit-appearance:none; -moz-appearance:none;  -o-appearance:none; appearance:none; font-family:Arial, Helvetica, sans-serif; font-size:16px; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0; outline:0;}
+input[type=checkbox]{ -webkit-appearance:checkbox; -moz-appearance:checkbox; appearance:checkbox;}
+
+input::-ms-clear {
+    display: none;
+}
+
+::-webkit-input-placeholder {
+    color:    #fff !important;
+}
+:-moz-placeholder {
+   color:    #fff !important;
+   opacity:  1;
+}
+::-moz-placeholder {
+   color:    #fff !important;
+   opacity:  1;
+}
+:-ms-input-placeholder {
+   color:    #fff !important;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.login { background:url(../images/Login/images/login-bg.jpg) no-repeat 0 0; background-size:cover; }
+.login .content { margin: 0 auto; max-width:400px; font-family: "montserratbold"; background:url(../images/Login/images/login.jpg) no-repeat 0 0 / 100% 100%; padding:2.9% 40px; position:relative }
+.login-inner {background:rgba(8,169,250,0.6); padding:62px 20px;}
+.login-inner .logo {text-align:center}
+.login-inner .logo img {text-align:center; width:120px;}
+.login .content .form-title { color: #fefcfc; display: block; font-family: "montserratbold"; font-size:28px; line-height: 34px;  margin: 10px auto 0; max-width: 255px; padding-bottom: 18px;  text-align: center; text-shadow: -2px -2px 0 #2c8ec6, -2px 2px 0 #2c8ec6, 2px -2px 0 #2c8ec6, 2px 2px 0 #2c8ec6;}
+.login .content .login-form, .login .content .forget-form { margin: 0; padding: 0; }
+.login .content .login-box i{ color:#f2f0f0; font-size:22px; margin:8px 2px 4px 10px; width:22px; position:absolute}
+.login .content .login-box .form-control { background:none; color:#f2f0f0; border:1px solid #f2f0f0; font-family: 'montserratbold'; border-radius:3px !important; font-size: 15px; height:38px; display:inline-block }
+.login .content .login-box > .form-control {padding-left:45px; padding-right:45px}
+.login .content .login-box > .form-control.login-drop {background:url(../images/Login/images/company-arrow.png) no-repeat 98% center; }
+.login .content .login-box > .form-control.login-drop option {border-radius:3px; border:1px solid #fff; background:#026495; padding:5px;}
+
+.login .content .login-box .form-control:focus { box-shadow: 0  0px 8px rgba(255, 255, 255, 0.6) inset, 0 0 8px rgba(255, 255, 255, 0.6);}
+.login .content .rp-checker {color:#fff; font-size:14px;}
+.login .content .form-group.form-btn {text-align:center}
+.login .content .form-group .btn { background-color: #056596;  border-radius: 3px !important; color: #f2f1ee;  font-family: 'montserratregular';  font-size: 20px; padding: 5px 0;   width: 100px; margin:0 auto; border:1px solid #fff; }
+.login .content .form-group .btn:hover {box-shadow:0 17px 8px rgba(255, 255, 255, 0.6) inset, 0 0 8px rgba(255, 255, 255, 0.6); background-color:transparent; border:1px solid rgba(255, 255, 255, 0.5); } 
+.login .content .form-actions .btn:hover, .login .content .form-actions .btn:focus, .login .content .form-actions .btn:active {background:#fff;}
+.forgot-pass {float:left; color:#fff; font-size:14px;}
+.new-regi {float:right; color:#fff; font-size:14px;}
+.new-regi:hover, .forgot-pass:hover {color:#ccc; text-decoration:none}
+.user-back {position:relative}
+.userback-img {position:absolute; right:10px; top:5px; cursor:pointer}
+.userback-img img {width:38px;}
+.valid-box {background: #096a9a; color: #fff; margin-bottom: 10px;  padding:10px; }
+.login-cancle {position:absolute; right:10px; top:5px; cursor:pointer}
+.login-cancle img {width:28px;}
+
+.advertising {position: absolute;  top:30%; left: -360px; }
+.advertising .adv-img img {width:250px;}
+.advertising .adv-close {position:absolute; left:0; top:0;}
+.advertising .adv-close img {width:70px; }
+.respo-advertising {display:none}
+
+
+#programmaticModalPopupBehavior_backgroundElement{background:rgba(0,0,0,0.7); width:100% !important}
+.login #programmaticPopup {border-radius: 5px; left: 50% !important;  margin-left: -200px !important; margin-top: -186px !important;  position: absolute !important; top: 50% !important;    width: 400px !important; 
+    z-index: 99989 !important;}
+
+.regi-box {background:#2a9ad3; border: 5px solid #000 !important; padding:8px 25px 25px; border:2px solid #94a1b2; text-align:center; color:#fff; font-family: 'montserratbold'; font-size:17px; line-height:22px; }
+.regi-box .spnNumber {font-size:28px; margin:0; padding:8px 0; display:block}
+.regi-box .spnTrial{font-size:18px; display:block; padding-bottom:40px; line-height:24px }
+.regi-close {background:#000; padding:4px 7px; border-radius:2px !important; float:right; margin-right:-15px}
+.regi-close i {font-size:20px !important; color:#fff}
+#lblTrial {display: block;   margin-top: 45px;}
+.reginow-btn {color:#316b9d; font-weight:bold; padding-top:7px; display:inline-block; text-decoration:underline}
+
+.regi-box .btn { background-color: #056596;  border-radius: 3px !important; color: #f2f1ee;  font-family: 'montserratregular';  font-size: 18px; padding: 6px 0 7px 0;   width: 170px; margin:50px auto 0; border:1px solid #fff; display:inline-block}
+.regi-box .btn:hover {box-shadow:0 17px 8px rgba(255, 255, 255, 0.6) inset, 0 0 8px rgba(255, 255, 255, 0.6); background-color:transparent; border:1px solid rgba(255, 255, 255, 0.5); }
+
+/*.login #programmaticPopup.login-regibox {margin-top:-232px !important}*/
+#pnlReg {margin-top:20px}
+.login .content .login-box.input-serialkey {margin-top:10px; }
+.login .content .login-box.input-serialkey .form-control {text-align:center; width:250px    }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+.login .content { max-width: 370px; padding: 29.5% 30px;}
+.advertising {left: -190px;}
+.advertising .adv-img img { width: 190px;}
+.advertising .adv-close img { width: 60px;}
+
+}
+
+@media (max-width: 767px) {
+	
+}
+	
+
+
+@media (max-width: 481px) {
+.login .content {max-width: 320px; padding:0;}
+.login-inner {padding:10px 20px 107px 20px;}
+.login-inner .logo img {width:90px;}
+.login .content .form-group {margin-bottom:10px;}
+.login .content .form-title {font-size: 22px;line-height: 27px;margin: 5px auto 0; padding-bottom: 10px;}
+.login .content .login-box i {font-size: 19px; margin: 10px 2px 4px 10px; width: 19px;}
+.login .content .login-box .form-control {font-size: 14px;  height: 34px;}
+.login-cancle {top:6px;}
+.login-cancle img { width: 21px;}
+.login .content .form-group.form-btn {margin-bottom:0;}
+.login .content .form-group .btn {padding: 4px 0; width: 92px; font-size:18px;}
+.advertising {display:none}
+.respo-advertising {position:absolute; display:block; bottom:0; left:0;}
+.respo-advertising .respo-adv-img img {max-width:320px;}
+.respo-advertising .respo-adv-close {position:absolute; left:0; top:0; z-index:1000}
+.respo-advertising .respo-adv-close img {max-width:60px;}
+
+.login #programmaticPopup {margin-left: -150px !important; margin-top: -153px !important; width: 300px !important;}
+.regi-box {padding: 8px 10px 25px; font-size:14px}
+#lblTrial { margin-top: 30px;}
+.regi-box .spnNumber { font-size: 24px;  padding: 5px 0;}
+.regi-box .spnTrial {padding-bottom:25px;  font-size: 14px; line-height: 20px;  }
+.regi-box .btn { margin: 35px auto 0;    font-size: 16px;  width: 150px;}
+.regi-close {margin-right: 0; padding:1px 6px 2px 7px; }
+.regi-close i {font-size:16px !important  }
+
+.login .content .login-box.input-serialkey .form-control { width: 230px;}
+
+
+}

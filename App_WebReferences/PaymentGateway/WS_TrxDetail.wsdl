@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s0="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" name="WS_TrxDetail" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetOpenBatchSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="rpNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="beginDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="endDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="extData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOpenBatchSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetOpenBatchSummaryResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCardTrx">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RPNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="BeginDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EndDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PaymentType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludePaymentType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeTransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeResult" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeCardType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="User" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="invoiceId" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransformType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Xsl" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ColDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RowDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCardTrxResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetCardTrxResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCardTrxSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RPNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="BeginDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EndDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Register" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="User" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransformType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Xsl" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ColDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RowDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCardTrxSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetCardTrxSummaryResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCheckTrx">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RPNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="BeginDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EndDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PaymentType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludePaymentType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeTransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeResult" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCheck" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CheckNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="AcctNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RouteNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="User" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="invoiceId" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SettleDt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransformType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Xsl" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ColDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RowDelim" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCheckTrxResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetCheckTrxResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="string" nillable="true" type="xs:string" />
+    </xs:schema>
+  </types>
+  <message name="GetOpenBatchSummarySoapIn">
+    <part name="parameters" element="s0:GetOpenBatchSummary" />
+  </message>
+  <message name="GetOpenBatchSummarySoapOut">
+    <part name="parameters" element="s0:GetOpenBatchSummaryResponse" />
+  </message>
+  <message name="GetCardTrxSoapIn">
+    <part name="parameters" element="s0:GetCardTrx" />
+  </message>
+  <message name="GetCardTrxSoapOut">
+    <part name="parameters" element="s0:GetCardTrxResponse" />
+  </message>
+  <message name="GetCardTrxSummarySoapIn">
+    <part name="parameters" element="s0:GetCardTrxSummary" />
+  </message>
+  <message name="GetCardTrxSummarySoapOut">
+    <part name="parameters" element="s0:GetCardTrxSummaryResponse" />
+  </message>
+  <message name="GetCheckTrxSoapIn">
+    <part name="parameters" element="s0:GetCheckTrx" />
+  </message>
+  <message name="GetCheckTrxSoapOut">
+    <part name="parameters" element="s0:GetCheckTrxResponse" />
+  </message>
+  <message name="GetOpenBatchSummaryHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="rpNum" type="s:string" />
+    <part name="beginDt" type="s:string" />
+    <part name="endDt" type="s:string" />
+    <part name="extData" type="s:string" />
+  </message>
+  <message name="GetOpenBatchSummaryHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetCardTrxHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="RPNum" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="BeginDt" type="s:string" />
+    <part name="EndDt" type="s:string" />
+    <part name="PaymentType" type="s:string" />
+    <part name="ExcludePaymentType" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="ExcludeTransType" type="s:string" />
+    <part name="ApprovalCode" type="s:string" />
+    <part name="Result" type="s:string" />
+    <part name="ExcludeResult" type="s:string" />
+    <part name="NameOnCard" type="s:string" />
+    <part name="CardNum" type="s:string" />
+    <part name="CardType" type="s:string" />
+    <part name="ExcludeCardType" type="s:string" />
+    <part name="ExcludeVoid" type="s:string" />
+    <part name="User" type="s:string" />
+    <part name="invoiceId" type="s:string" />
+    <part name="SettleFlag" type="s:string" />
+    <part name="SettleMsg" type="s:string" />
+    <part name="SettleDt" type="s:string" />
+    <part name="TransformType" type="s:string" />
+    <part name="Xsl" type="s:string" />
+    <part name="ColDelim" type="s:string" />
+    <part name="RowDelim" type="s:string" />
+    <part name="IncludeHeader" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="GetCardTrxHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetCardTrxSummaryHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="RPNum" type="s:string" />
+    <part name="BeginDt" type="s:string" />
+    <part name="EndDt" type="s:string" />
+    <part name="ApprovalCode" type="s:string" />
+    <part name="Register" type="s:string" />
+    <part name="NameOnCard" type="s:string" />
+    <part name="CardNum" type="s:string" />
+    <part name="CardType" type="s:string" />
+    <part name="ExcludeVoid" type="s:string" />
+    <part name="User" type="s:string" />
+    <part name="SettleFlag" type="s:string" />
+    <part name="SettleMsg" type="s:string" />
+    <part name="SettleDt" type="s:string" />
+    <part name="TransformType" type="s:string" />
+    <part name="Xsl" type="s:string" />
+    <part name="ColDelim" type="s:string" />
+    <part name="RowDelim" type="s:string" />
+    <part name="IncludeHeader" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="GetCardTrxSummaryHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetCheckTrxHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="RPNum" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="BeginDt" type="s:string" />
+    <part name="EndDt" type="s:string" />
+    <part name="PaymentType" type="s:string" />
+    <part name="ExcludePaymentType" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="ExcludeTransType" type="s:string" />
+    <part name="ApprovalCode" type="s:string" />
+    <part name="Result" type="s:string" />
+    <part name="ExcludeResult" type="s:string" />
+    <part name="NameOnCheck" type="s:string" />
+    <part name="CheckNum" type="s:string" />
+    <part name="AcctNum" type="s:string" />
+    <part name="RouteNum" type="s:string" />
+    <part name="ExcludeVoid" type="s:string" />
+    <part name="User" type="s:string" />
+    <part name="invoiceId" type="s:string" />
+    <part name="SettleFlag" type="s:string" />
+    <part name="SettleMsg" type="s:string" />
+    <part name="SettleDt" type="s:string" />
+    <part name="TransformType" type="s:string" />
+    <part name="Xsl" type="s:string" />
+    <part name="ColDelim" type="s:string" />
+    <part name="RowDelim" type="s:string" />
+    <part name="IncludeHeader" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="GetCheckTrxHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="WS_TrxDetailSoap">
+    <operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get open batch summery</wsdl:documentation>
+      <input message="s0:GetOpenBatchSummarySoapIn" />
+      <output message="s0:GetOpenBatchSummarySoapOut" />
+    </operation>
+    <operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx</wsdl:documentation>
+      <input message="s0:GetCardTrxSoapIn" />
+      <output message="s0:GetCardTrxSoapOut" />
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx summary</wsdl:documentation>
+      <input message="s0:GetCardTrxSummarySoapIn" />
+      <output message="s0:GetCardTrxSummarySoapOut" />
+    </operation>
+    <operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get check trx</wsdl:documentation>
+      <input message="s0:GetCheckTrxSoapIn" />
+      <output message="s0:GetCheckTrxSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_TrxDetailSoap12">
+    <operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get open batch summery</wsdl:documentation>
+      <input message="s0:GetOpenBatchSummarySoapIn" />
+      <output message="s0:GetOpenBatchSummarySoapOut" />
+    </operation>
+    <operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx</wsdl:documentation>
+      <input message="s0:GetCardTrxSoapIn" />
+      <output message="s0:GetCardTrxSoapOut" />
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx summary</wsdl:documentation>
+      <input message="s0:GetCardTrxSummarySoapIn" />
+      <output message="s0:GetCardTrxSummarySoapOut" />
+    </operation>
+    <operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get check trx</wsdl:documentation>
+      <input message="s0:GetCheckTrxSoapIn" />
+      <output message="s0:GetCheckTrxSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_TrxDetailHttpPost">
+    <operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get open batch summery</wsdl:documentation>
+      <input message="s0:GetOpenBatchSummaryHttpPostIn" />
+      <output message="s0:GetOpenBatchSummaryHttpPostOut" />
+    </operation>
+    <operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx</wsdl:documentation>
+      <input message="s0:GetCardTrxHttpPostIn" />
+      <output message="s0:GetCardTrxHttpPostOut" />
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card trx summary</wsdl:documentation>
+      <input message="s0:GetCardTrxSummaryHttpPostIn" />
+      <output message="s0:GetCardTrxSummaryHttpPostOut" />
+    </operation>
+    <operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get check trx</wsdl:documentation>
+      <input message="s0:GetCheckTrxHttpPostIn" />
+      <output message="s0:GetCheckTrxHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="WS_TrxDetailSoap" type="s0:WS_TrxDetailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetOpenBatchSummary">
+      <soap:operation soapAction="http://tempuri.org/GetOpenBatchSummary" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCardTrx">
+      <soap:operation soapAction="http://tempuri.org/GetCardTrx" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <soap:operation soapAction="http://tempuri.org/GetCardTrxSummary" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCheckTrx">
+      <soap:operation soapAction="http://tempuri.org/GetCheckTrx" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_TrxDetailSoap12" type="s0:WS_TrxDetailSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetOpenBatchSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetOpenBatchSummary" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCardTrx">
+      <soap12:operation soapAction="http://tempuri.org/GetCardTrx" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetCardTrxSummary" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCheckTrx">
+      <soap12:operation soapAction="http://tempuri.org/GetCheckTrx" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_TrxDetailHttpPost" type="s0:WS_TrxDetailHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetOpenBatchSummary">
+      <http:operation location="/GetOpenBatchSummary" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCardTrx">
+      <http:operation location="/GetCardTrx" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCardTrxSummary">
+      <http:operation location="/GetCardTrxSummary" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCheckTrx">
+      <http:operation location="/GetCheckTrx" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_TrxDetail">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trx Detail web service</wsdl:documentation>
+    <port name="WS_TrxDetailSoap" binding="s0:WS_TrxDetailSoap">
+      <soap:address location="https://secure.dataxchange.biz/ws/trxdetail.asmx" />
+    </port>
+    <port name="WS_TrxDetailSoap12" binding="s0:WS_TrxDetailSoap12">
+      <soap12:address location="https://secure.dataxchange.biz/ws/trxdetail.asmx" />
+    </port>
+    <port name="WS_TrxDetailHttpPost" binding="s0:WS_TrxDetailHttpPost">
+      <http:address location="https://secure.dataxchange.biz/ws/trxdetail.asmx" />
+    </port>
+  </service>
+</definitions>

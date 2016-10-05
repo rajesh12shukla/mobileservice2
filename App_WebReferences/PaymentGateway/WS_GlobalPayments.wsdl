@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s0="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" name="WS_GlobalPayments" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="GlobalPayments" />
+      <xs:element name="GetTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="GlobalPayments" minOccurs="0" maxOccurs="1" name="GetTransactionResult" type="q1:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="GlobalPayments" minOccurs="0" maxOccurs="1" name="GetInfoResult" type="q2:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCreditCard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="MagData" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="InvNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Street" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CVNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCreditCardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="GlobalPayments" minOccurs="0" maxOccurs="1" name="ProcessCreditCardResult" type="q3:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessDebitCard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="MagData" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="InvNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Pin" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RegisterNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SureChargeAmt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CashBackAmt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessDebitCardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="GlobalPayments" minOccurs="0" maxOccurs="1" name="ProcessDebitCardResult" type="q4:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessEBTCard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="MagData" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="InvNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Pin" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RegisterNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SureChargeAmt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CashBackAmt" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessEBTCardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="GlobalPayments" minOccurs="0" maxOccurs="1" name="ProcessEBTCardResult" type="q5:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessACH">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CheckNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="TransitNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="AccountNum" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="NameOnCheck" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="StreetAddress" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CheckType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IDType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IDNumber" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="IDStateCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessACHResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="GlobalPayments" minOccurs="0" maxOccurs="1" name="ProcessACHResult" type="q6:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessSignature">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SignatureType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SignatureData" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="AuthCode" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessSignatureResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q7="GlobalPayments" minOccurs="0" maxOccurs="1" name="ProcessSignatureResult" type="q7:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q8="GlobalPayments" name="Response" nillable="true" type="q8:Response" />
+    </xs:schema>
+    <xs:schema xmlns:tns="GlobalPayments" elementFormDefault="qualified" targetNamespace="GlobalPayments" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="Response">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RespMSG" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AuthCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HostCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HostURL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ReceiptURL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetAVSResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetAVSResultTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetStreetMatchTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetZipMatchTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCVResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCVResultTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetGetOrigResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCommercialCard" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkingKey" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="KeyPointer" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="GetTransactionSoapIn">
+    <part name="parameters" element="s0:GetTransaction" />
+  </message>
+  <message name="GetTransactionSoapOut">
+    <part name="parameters" element="s0:GetTransactionResponse" />
+  </message>
+  <message name="GetInfoSoapIn">
+    <part name="parameters" element="s0:GetInfo" />
+  </message>
+  <message name="GetInfoSoapOut">
+    <part name="parameters" element="s0:GetInfoResponse" />
+  </message>
+  <message name="ProcessCreditCardSoapIn">
+    <part name="parameters" element="s0:ProcessCreditCard" />
+  </message>
+  <message name="ProcessCreditCardSoapOut">
+    <part name="parameters" element="s0:ProcessCreditCardResponse" />
+  </message>
+  <message name="ProcessDebitCardSoapIn">
+    <part name="parameters" element="s0:ProcessDebitCard" />
+  </message>
+  <message name="ProcessDebitCardSoapOut">
+    <part name="parameters" element="s0:ProcessDebitCardResponse" />
+  </message>
+  <message name="ProcessEBTCardSoapIn">
+    <part name="parameters" element="s0:ProcessEBTCard" />
+  </message>
+  <message name="ProcessEBTCardSoapOut">
+    <part name="parameters" element="s0:ProcessEBTCardResponse" />
+  </message>
+  <message name="ProcessACHSoapIn">
+    <part name="parameters" element="s0:ProcessACH" />
+  </message>
+  <message name="ProcessACHSoapOut">
+    <part name="parameters" element="s0:ProcessACHResponse" />
+  </message>
+  <message name="ProcessSignatureSoapIn">
+    <part name="parameters" element="s0:ProcessSignature" />
+  </message>
+  <message name="ProcessSignatureSoapOut">
+    <part name="parameters" element="s0:ProcessSignatureResponse" />
+  </message>
+  <message name="GetTransactionHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="PNRef" type="s:string" />
+  </message>
+  <message name="GetTransactionHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="GetInfoHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="GetInfoHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="ProcessCreditCardHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="CardNum" type="s:string" />
+    <part name="ExpDate" type="s:string" />
+    <part name="MagData" type="s:string" />
+    <part name="NameOnCard" type="s:string" />
+    <part name="Amount" type="s:string" />
+    <part name="InvNum" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="Zip" type="s:string" />
+    <part name="Street" type="s:string" />
+    <part name="CVNum" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="ProcessCreditCardHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="ProcessDebitCardHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="CardNum" type="s:string" />
+    <part name="ExpDate" type="s:string" />
+    <part name="MagData" type="s:string" />
+    <part name="NameOnCard" type="s:string" />
+    <part name="Amount" type="s:string" />
+    <part name="InvNum" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="Pin" type="s:string" />
+    <part name="RegisterNum" type="s:string" />
+    <part name="SureChargeAmt" type="s:string" />
+    <part name="CashBackAmt" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="ProcessDebitCardHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="ProcessEBTCardHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="CardNum" type="s:string" />
+    <part name="ExpDate" type="s:string" />
+    <part name="MagData" type="s:string" />
+    <part name="NameOnCard" type="s:string" />
+    <part name="Amount" type="s:string" />
+    <part name="InvNum" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="Pin" type="s:string" />
+    <part name="RegisterNum" type="s:string" />
+    <part name="SureChargeAmt" type="s:string" />
+    <part name="CashBackAmt" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="ProcessEBTCardHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="ProcessACHHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="TransType" type="s:string" />
+    <part name="CheckNum" type="s:string" />
+    <part name="TransitNum" type="s:string" />
+    <part name="AccountNum" type="s:string" />
+    <part name="Amount" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="NameOnCheck" type="s:string" />
+    <part name="StreetAddress" type="s:string" />
+    <part name="City" type="s:string" />
+    <part name="State" type="s:string" />
+    <part name="PostalCode" type="s:string" />
+    <part name="Phone" type="s:string" />
+    <part name="CheckType" type="s:string" />
+    <part name="IDType" type="s:string" />
+    <part name="IDNumber" type="s:string" />
+    <part name="IDStateCode" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="ProcessACHHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <message name="ProcessSignatureHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="SignatureType" type="s:string" />
+    <part name="SignatureData" type="s:string" />
+    <part name="PNRef" type="s:string" />
+    <part name="Result" type="s:string" />
+    <part name="AuthCode" type="s:string" />
+    <part name="ExtData" type="s:string" />
+  </message>
+  <message name="ProcessSignatureHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <portType name="WS_GlobalPaymentsSoap">
+    <operation name="GetTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get transaction</wsdl:documentation>
+      <input message="s0:GetTransactionSoapIn" />
+      <output message="s0:GetTransactionSoapOut" />
+    </operation>
+    <operation name="GetInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get info</wsdl:documentation>
+      <input message="s0:GetInfoSoapIn" />
+      <output message="s0:GetInfoSoapOut" />
+    </operation>
+    <operation name="ProcessCreditCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process credit card</wsdl:documentation>
+      <input message="s0:ProcessCreditCardSoapIn" />
+      <output message="s0:ProcessCreditCardSoapOut" />
+    </operation>
+    <operation name="ProcessDebitCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process debit card</wsdl:documentation>
+      <input message="s0:ProcessDebitCardSoapIn" />
+      <output message="s0:ProcessDebitCardSoapOut" />
+    </operation>
+    <operation name="ProcessEBTCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process EBT card</wsdl:documentation>
+      <input message="s0:ProcessEBTCardSoapIn" />
+      <output message="s0:ProcessEBTCardSoapOut" />
+    </operation>
+    <operation name="ProcessACH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process ACH</wsdl:documentation>
+      <input message="s0:ProcessACHSoapIn" />
+      <output message="s0:ProcessACHSoapOut" />
+    </operation>
+    <operation name="ProcessSignature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process signature</wsdl:documentation>
+      <input message="s0:ProcessSignatureSoapIn" />
+      <output message="s0:ProcessSignatureSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_GlobalPaymentsSoap12">
+    <operation name="GetTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get transaction</wsdl:documentation>
+      <input message="s0:GetTransactionSoapIn" />
+      <output message="s0:GetTransactionSoapOut" />
+    </operation>
+    <operation name="GetInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get info</wsdl:documentation>
+      <input message="s0:GetInfoSoapIn" />
+      <output message="s0:GetInfoSoapOut" />
+    </operation>
+    <operation name="ProcessCreditCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process credit card</wsdl:documentation>
+      <input message="s0:ProcessCreditCardSoapIn" />
+      <output message="s0:ProcessCreditCardSoapOut" />
+    </operation>
+    <operation name="ProcessDebitCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process debit card</wsdl:documentation>
+      <input message="s0:ProcessDebitCardSoapIn" />
+      <output message="s0:ProcessDebitCardSoapOut" />
+    </operation>
+    <operation name="ProcessEBTCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process EBT card</wsdl:documentation>
+      <input message="s0:ProcessEBTCardSoapIn" />
+      <output message="s0:ProcessEBTCardSoapOut" />
+    </operation>
+    <operation name="ProcessACH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process ACH</wsdl:documentation>
+      <input message="s0:ProcessACHSoapIn" />
+      <output message="s0:ProcessACHSoapOut" />
+    </operation>
+    <operation name="ProcessSignature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process signature</wsdl:documentation>
+      <input message="s0:ProcessSignatureSoapIn" />
+      <output message="s0:ProcessSignatureSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_GlobalPaymentsHttpPost">
+    <operation name="GetTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get transaction</wsdl:documentation>
+      <input message="s0:GetTransactionHttpPostIn" />
+      <output message="s0:GetTransactionHttpPostOut" />
+    </operation>
+    <operation name="GetInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get info</wsdl:documentation>
+      <input message="s0:GetInfoHttpPostIn" />
+      <output message="s0:GetInfoHttpPostOut" />
+    </operation>
+    <operation name="ProcessCreditCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process credit card</wsdl:documentation>
+      <input message="s0:ProcessCreditCardHttpPostIn" />
+      <output message="s0:ProcessCreditCardHttpPostOut" />
+    </operation>
+    <operation name="ProcessDebitCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process debit card</wsdl:documentation>
+      <input message="s0:ProcessDebitCardHttpPostIn" />
+      <output message="s0:ProcessDebitCardHttpPostOut" />
+    </operation>
+    <operation name="ProcessEBTCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process EBT card</wsdl:documentation>
+      <input message="s0:ProcessEBTCardHttpPostIn" />
+      <output message="s0:ProcessEBTCardHttpPostOut" />
+    </operation>
+    <operation name="ProcessACH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process ACH</wsdl:documentation>
+      <input message="s0:ProcessACHHttpPostIn" />
+      <output message="s0:ProcessACHHttpPostOut" />
+    </operation>
+    <operation name="ProcessSignature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Process signature</wsdl:documentation>
+      <input message="s0:ProcessSignatureHttpPostIn" />
+      <output message="s0:ProcessSignatureHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="WS_GlobalPaymentsSoap" type="s0:WS_GlobalPaymentsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetTransaction" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfo">
+      <soap:operation soapAction="http://tempuri.org/GetInfo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessCreditCard">
+      <soap:operation soapAction="http://tempuri.org/ProcessCreditCard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessDebitCard">
+      <soap:operation soapAction="http://tempuri.org/ProcessDebitCard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessEBTCard">
+      <soap:operation soapAction="http://tempuri.org/ProcessEBTCard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessACH">
+      <soap:operation soapAction="http://tempuri.org/ProcessACH" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessSignature">
+      <soap:operation soapAction="http://tempuri.org/ProcessSignature" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_GlobalPaymentsSoap12" type="s0:WS_GlobalPaymentsSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetTransaction" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetInfo" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessCreditCard">
+      <soap12:operation soapAction="http://tempuri.org/ProcessCreditCard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessDebitCard">
+      <soap12:operation soapAction="http://tempuri.org/ProcessDebitCard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessEBTCard">
+      <soap12:operation soapAction="http://tempuri.org/ProcessEBTCard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessACH">
+      <soap12:operation soapAction="http://tempuri.org/ProcessACH" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessSignature">
+      <soap12:operation soapAction="http://tempuri.org/ProcessSignature" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_GlobalPaymentsHttpPost" type="s0:WS_GlobalPaymentsHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetTransaction">
+      <http:operation location="/GetTransaction" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetInfo">
+      <http:operation location="/GetInfo" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ProcessCreditCard">
+      <http:operation location="/ProcessCreditCard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ProcessDebitCard">
+      <http:operation location="/ProcessDebitCard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ProcessEBTCard">
+      <http:operation location="/ProcessEBTCard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ProcessACH">
+      <http:operation location="/ProcessACH" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ProcessSignature">
+      <http:operation location="/ProcessSignature" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_GlobalPayments">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Payment web service</wsdl:documentation>
+    <port name="WS_GlobalPaymentsSoap" binding="s0:WS_GlobalPaymentsSoap">
+      <soap:address location="https://secure.dataxchange.biz/ws/transact.asmx" />
+    </port>
+    <port name="WS_GlobalPaymentsSoap12" binding="s0:WS_GlobalPaymentsSoap12">
+      <soap12:address location="https://secure.dataxchange.biz/ws/transact.asmx" />
+    </port>
+    <port name="WS_GlobalPaymentsHttpPost" binding="s0:WS_GlobalPaymentsHttpPost">
+      <http:address location="https://secure.dataxchange.biz/ws/transact.asmx" />
+    </port>
+  </service>
+</definitions>

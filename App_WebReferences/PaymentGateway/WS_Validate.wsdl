@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s0="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" name="WS_Validate" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://localhost/GlobalPay" />
+      <xs:element name="GetCardType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCardTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetCardTypeResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsCommercialCard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsCommercialCardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="IsCommercialCardResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsFSAHRACard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsFSAHRACardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="IsFSAHRACardResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidCard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidCardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ValidCardResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidCardLength">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidCardLengthResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ValidCardLengthResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidExpDate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidExpDateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ValidExpDateResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidMod10">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidMod10Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ValidMod10Result" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNetworkID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GlobalPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardNumber" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNetworkIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://localhost/GlobalPay" minOccurs="0" maxOccurs="1" name="GetNetworkIDResult" type="q1:Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="boolean" type="xs:boolean" />
+      <xs:element name="int" type="xs:int" />
+      <xs:element xmlns:q2="http://localhost/GlobalPay" name="Response" nillable="true" type="q2:Response" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://localhost/GlobalPay" elementFormDefault="qualified" targetNamespace="http://localhost/GlobalPay" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="Response">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RespMSG" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AuthCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PNRef" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HostCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HostURL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ReceiptURL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetAVSResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetAVSResultTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetStreetMatchTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetZipMatchTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCVResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCVResultTXT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetGetOrigResult" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GetCommercialCard" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkingKey" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="KeyPointer" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExtData" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="GetCardTypeSoapIn">
+    <part name="parameters" element="s0:GetCardType" />
+  </message>
+  <message name="GetCardTypeSoapOut">
+    <part name="parameters" element="s0:GetCardTypeResponse" />
+  </message>
+  <message name="IsCommercialCardSoapIn">
+    <part name="parameters" element="s0:IsCommercialCard" />
+  </message>
+  <message name="IsCommercialCardSoapOut">
+    <part name="parameters" element="s0:IsCommercialCardResponse" />
+  </message>
+  <message name="IsFSAHRACardSoapIn">
+    <part name="parameters" element="s0:IsFSAHRACard" />
+  </message>
+  <message name="IsFSAHRACardSoapOut">
+    <part name="parameters" element="s0:IsFSAHRACardResponse" />
+  </message>
+  <message name="ValidCardSoapIn">
+    <part name="parameters" element="s0:ValidCard" />
+  </message>
+  <message name="ValidCardSoapOut">
+    <part name="parameters" element="s0:ValidCardResponse" />
+  </message>
+  <message name="ValidCardLengthSoapIn">
+    <part name="parameters" element="s0:ValidCardLength" />
+  </message>
+  <message name="ValidCardLengthSoapOut">
+    <part name="parameters" element="s0:ValidCardLengthResponse" />
+  </message>
+  <message name="ValidExpDateSoapIn">
+    <part name="parameters" element="s0:ValidExpDate" />
+  </message>
+  <message name="ValidExpDateSoapOut">
+    <part name="parameters" element="s0:ValidExpDateResponse" />
+  </message>
+  <message name="ValidMod10SoapIn">
+    <part name="parameters" element="s0:ValidMod10" />
+  </message>
+  <message name="ValidMod10SoapOut">
+    <part name="parameters" element="s0:ValidMod10Response" />
+  </message>
+  <message name="GetNetworkIDSoapIn">
+    <part name="parameters" element="s0:GetNetworkID" />
+  </message>
+  <message name="GetNetworkIDSoapOut">
+    <part name="parameters" element="s0:GetNetworkIDResponse" />
+  </message>
+  <message name="GetCardTypeHttpPostIn">
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="GetCardTypeHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="IsCommercialCardHttpPostIn">
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="IsCommercialCardHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="IsFSAHRACardHttpPostIn">
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="IsFSAHRACardHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="ValidCardHttpPostIn">
+    <part name="CardNumber" type="s:string" />
+    <part name="ExpDate" type="s:string" />
+  </message>
+  <message name="ValidCardHttpPostOut">
+    <part name="Body" element="s0:int" />
+  </message>
+  <message name="ValidCardLengthHttpPostIn">
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="ValidCardLengthHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="ValidExpDateHttpPostIn">
+    <part name="ExpDate" type="s:string" />
+  </message>
+  <message name="ValidExpDateHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="ValidMod10HttpPostIn">
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="ValidMod10HttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="GetNetworkIDHttpPostIn">
+    <part name="GlobalUserName" type="s:string" />
+    <part name="GlobalPassword" type="s:string" />
+    <part name="CardNumber" type="s:string" />
+  </message>
+  <message name="GetNetworkIDHttpPostOut">
+    <part name="Body" element="s0:Response" />
+  </message>
+  <portType name="WS_ValidateSoap">
+    <operation name="GetCardType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card type</wsdl:documentation>
+      <input message="s0:GetCardTypeSoapIn" />
+      <output message="s0:GetCardTypeSoapOut" />
+    </operation>
+    <operation name="IsCommercialCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is commercial</wsdl:documentation>
+      <input message="s0:IsCommercialCardSoapIn" />
+      <output message="s0:IsCommercialCardSoapOut" />
+    </operation>
+    <operation name="IsFSAHRACard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is FSAHRA</wsdl:documentation>
+      <input message="s0:IsFSAHRACardSoapIn" />
+      <output message="s0:IsFSAHRACardSoapOut" />
+    </operation>
+    <operation name="ValidCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid</wsdl:documentation>
+      <input message="s0:ValidCardSoapIn" />
+      <output message="s0:ValidCardSoapOut" />
+    </operation>
+    <operation name="ValidCardLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid card length</wsdl:documentation>
+      <input message="s0:ValidCardLengthSoapIn" />
+      <output message="s0:ValidCardLengthSoapOut" />
+    </operation>
+    <operation name="ValidExpDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid exp date</wsdl:documentation>
+      <input message="s0:ValidExpDateSoapIn" />
+      <output message="s0:ValidExpDateSoapOut" />
+    </operation>
+    <operation name="ValidMod10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid mod 10</wsdl:documentation>
+      <input message="s0:ValidMod10SoapIn" />
+      <output message="s0:ValidMod10SoapOut" />
+    </operation>
+    <operation name="GetNetworkID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetNetworkID</wsdl:documentation>
+      <input message="s0:GetNetworkIDSoapIn" />
+      <output message="s0:GetNetworkIDSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_ValidateSoap12">
+    <operation name="GetCardType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card type</wsdl:documentation>
+      <input message="s0:GetCardTypeSoapIn" />
+      <output message="s0:GetCardTypeSoapOut" />
+    </operation>
+    <operation name="IsCommercialCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is commercial</wsdl:documentation>
+      <input message="s0:IsCommercialCardSoapIn" />
+      <output message="s0:IsCommercialCardSoapOut" />
+    </operation>
+    <operation name="IsFSAHRACard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is FSAHRA</wsdl:documentation>
+      <input message="s0:IsFSAHRACardSoapIn" />
+      <output message="s0:IsFSAHRACardSoapOut" />
+    </operation>
+    <operation name="ValidCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid</wsdl:documentation>
+      <input message="s0:ValidCardSoapIn" />
+      <output message="s0:ValidCardSoapOut" />
+    </operation>
+    <operation name="ValidCardLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid card length</wsdl:documentation>
+      <input message="s0:ValidCardLengthSoapIn" />
+      <output message="s0:ValidCardLengthSoapOut" />
+    </operation>
+    <operation name="ValidExpDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid exp date</wsdl:documentation>
+      <input message="s0:ValidExpDateSoapIn" />
+      <output message="s0:ValidExpDateSoapOut" />
+    </operation>
+    <operation name="ValidMod10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid mod 10</wsdl:documentation>
+      <input message="s0:ValidMod10SoapIn" />
+      <output message="s0:ValidMod10SoapOut" />
+    </operation>
+    <operation name="GetNetworkID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetNetworkID</wsdl:documentation>
+      <input message="s0:GetNetworkIDSoapIn" />
+      <output message="s0:GetNetworkIDSoapOut" />
+    </operation>
+  </portType>
+  <portType name="WS_ValidateHttpPost">
+    <operation name="GetCardType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get card type</wsdl:documentation>
+      <input message="s0:GetCardTypeHttpPostIn" />
+      <output message="s0:GetCardTypeHttpPostOut" />
+    </operation>
+    <operation name="IsCommercialCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is commercial</wsdl:documentation>
+      <input message="s0:IsCommercialCardHttpPostIn" />
+      <output message="s0:IsCommercialCardHttpPostOut" />
+    </operation>
+    <operation name="IsFSAHRACard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is FSAHRA</wsdl:documentation>
+      <input message="s0:IsFSAHRACardHttpPostIn" />
+      <output message="s0:IsFSAHRACardHttpPostOut" />
+    </operation>
+    <operation name="ValidCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid</wsdl:documentation>
+      <input message="s0:ValidCardHttpPostIn" />
+      <output message="s0:ValidCardHttpPostOut" />
+    </operation>
+    <operation name="ValidCardLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid card length</wsdl:documentation>
+      <input message="s0:ValidCardLengthHttpPostIn" />
+      <output message="s0:ValidCardLengthHttpPostOut" />
+    </operation>
+    <operation name="ValidExpDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid exp date</wsdl:documentation>
+      <input message="s0:ValidExpDateHttpPostIn" />
+      <output message="s0:ValidExpDateHttpPostOut" />
+    </operation>
+    <operation name="ValidMod10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Is Valid mod 10</wsdl:documentation>
+      <input message="s0:ValidMod10HttpPostIn" />
+      <output message="s0:ValidMod10HttpPostOut" />
+    </operation>
+    <operation name="GetNetworkID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetNetworkID</wsdl:documentation>
+      <input message="s0:GetNetworkIDHttpPostIn" />
+      <output message="s0:GetNetworkIDHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="WS_ValidateSoap" type="s0:WS_ValidateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetCardType">
+      <soap:operation soapAction="http://tempuri.org/GetCardType" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsCommercialCard">
+      <soap:operation soapAction="http://tempuri.org/IsCommercialCard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsFSAHRACard">
+      <soap:operation soapAction="http://tempuri.org/IsFSAHRACard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidCard">
+      <soap:operation soapAction="http://tempuri.org/ValidCard" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidCardLength">
+      <soap:operation soapAction="http://tempuri.org/ValidCardLength" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidExpDate">
+      <soap:operation soapAction="http://tempuri.org/ValidExpDate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidMod10">
+      <soap:operation soapAction="http://tempuri.org/ValidMod10" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNetworkID">
+      <soap:operation soapAction="http://tempuri.org/GetNetworkID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_ValidateSoap12" type="s0:WS_ValidateSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetCardType">
+      <soap12:operation soapAction="http://tempuri.org/GetCardType" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsCommercialCard">
+      <soap12:operation soapAction="http://tempuri.org/IsCommercialCard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsFSAHRACard">
+      <soap12:operation soapAction="http://tempuri.org/IsFSAHRACard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidCard">
+      <soap12:operation soapAction="http://tempuri.org/ValidCard" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidCardLength">
+      <soap12:operation soapAction="http://tempuri.org/ValidCardLength" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidExpDate">
+      <soap12:operation soapAction="http://tempuri.org/ValidExpDate" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidMod10">
+      <soap12:operation soapAction="http://tempuri.org/ValidMod10" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNetworkID">
+      <soap12:operation soapAction="http://tempuri.org/GetNetworkID" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_ValidateHttpPost" type="s0:WS_ValidateHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetCardType">
+      <http:operation location="/GetCardType" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="IsCommercialCard">
+      <http:operation location="/IsCommercialCard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="IsFSAHRACard">
+      <http:operation location="/IsFSAHRACard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ValidCard">
+      <http:operation location="/ValidCard" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ValidCardLength">
+      <http:operation location="/ValidCardLength" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ValidExpDate">
+      <http:operation location="/ValidExpDate" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ValidMod10">
+      <http:operation location="/ValidMod10" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetNetworkID">
+      <http:operation location="/GetNetworkID" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_Validate">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate web service</wsdl:documentation>
+    <port name="WS_ValidateSoap" binding="s0:WS_ValidateSoap">
+      <soap:address location="https://secure.dataxchange.biz/ws/validate.asmx" />
+    </port>
+    <port name="WS_ValidateSoap12" binding="s0:WS_ValidateSoap12">
+      <soap12:address location="https://secure.dataxchange.biz/ws/validate.asmx" />
+    </port>
+    <port name="WS_ValidateHttpPost" binding="s0:WS_ValidateHttpPost">
+      <http:address location="https://secure.dataxchange.biz/ws/validate.asmx" />
+    </port>
+  </service>
+</definitions>
