@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCheck" targetNamespace="http://tempuri.org/dsCheck.xsd" xmlns:mstns="http://tempuri.org/dsCheck.xsd" xmlns="http://tempuri.org/dsCheck.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCheck" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCheck">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pay" type="xs:string" minOccurs="0" />
+              <xs:element name="ToOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="ToOrderAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtInvoices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Reference" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Disc" type="xs:string" minOccurs="0" />
+              <xs:element name="AmountPay" type="xs:string" minOccurs="0" />
+              <xs:element name="PayDate" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckNo" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorID" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBank">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="NBranch" type="xs:string" minOccurs="0" />
+              <xs:element name="NAcct" type="xs:string" minOccurs="0" />
+              <xs:element name="NRoute" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtAcct">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VendorID" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorAcct" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

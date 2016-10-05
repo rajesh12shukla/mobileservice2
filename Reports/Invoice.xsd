@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Invoice" targetNamespace="http://tempuri.org/Invoice.xsd" xmlns:mstns="http://tempuri.org/Invoice.xsd" xmlns="http://tempuri.org/Invoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Invoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Invoice" msprop:Generator_DataSetName="Invoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtInvoice" msprop:Generator_UserTableName="dtInvoice" msprop:Generator_RowEvArgName="dtInvoiceRowChangeEvent" msprop:Generator_TableVarName="tabledtInvoice" msprop:Generator_TablePropName="dtInvoice" msprop:Generator_RowDeletingName="dtInvoiceRowDeleting" msprop:Generator_RowChangingName="dtInvoiceRowChanging" msprop:Generator_RowDeletedName="dtInvoiceRowDeleted" msprop:Generator_RowEvHandlerName="dtInvoiceRowChangeEventHandler" msprop:Generator_TableClassName="dtInvoiceDataTable" msprop:Generator_RowChangedName="dtInvoiceRowChanged" msprop:Generator_RowClassName="dtInvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ref" msprop:Generator_ColumnVarNameInTable="columnref" msprop:Generator_ColumnPropNameInRow="_ref" msprop:Generator_ColumnPropNameInTable="refColumn" msprop:Generator_UserColumnName="ref" type="xs:int" minOccurs="0" />
+              <xs:element name="custom1" msprop:Generator_ColumnVarNameInTable="columncustom1" msprop:Generator_ColumnPropNameInRow="custom1" msprop:Generator_ColumnPropNameInTable="custom1Column" msprop:Generator_UserColumnName="custom1" type="xs:string" minOccurs="0" />
+              <xs:element name="customername" msprop:Generator_ColumnVarNameInTable="columncustomername" msprop:Generator_ColumnPropNameInRow="customername" msprop:Generator_ColumnPropNameInTable="customernameColumn" msprop:Generator_UserColumnName="customername" type="xs:string" minOccurs="0" />
+              <xs:element name="locname" msprop:Generator_ColumnVarNameInTable="columnlocname" msprop:Generator_ColumnPropNameInRow="locname" msprop:Generator_ColumnPropNameInTable="locnameColumn" msprop:Generator_UserColumnName="locname" type="xs:string" minOccurs="0" />
+              <xs:element name="billto" msprop:Generator_ColumnVarNameInTable="columnbillto" msprop:Generator_ColumnPropNameInRow="billto" msprop:Generator_ColumnPropNameInTable="billtoColumn" msprop:Generator_UserColumnName="billto" type="xs:string" minOccurs="0" />
+              <xs:element name="fdesc" msprop:Generator_ColumnVarNameInTable="columnfdesc" msprop:Generator_ColumnPropNameInRow="fdesc" msprop:Generator_ColumnPropNameInTable="fdescColumn" msprop:Generator_UserColumnName="fdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="po" msprop:Generator_ColumnVarNameInTable="columnpo" msprop:Generator_ColumnPropNameInRow="po" msprop:Generator_ColumnPropNameInTable="poColumn" msprop:Generator_UserColumnName="po" type="xs:string" minOccurs="0" />
+              <xs:element name="termsText" msprop:Generator_ColumnVarNameInTable="columntermsText" msprop:Generator_ColumnPropNameInRow="termsText" msprop:Generator_ColumnPropNameInTable="termsTextColumn" msprop:Generator_UserColumnName="termsText" type="xs:string" minOccurs="0" />
+              <xs:element name="taxregion" msprop:Generator_ColumnVarNameInTable="columntaxregion" msprop:Generator_ColumnPropNameInRow="taxregion" msprop:Generator_ColumnPropNameInTable="taxregionColumn" msprop:Generator_UserColumnName="taxregion" type="xs:string" minOccurs="0" />
+              <xs:element name="Duedate" msprop:Generator_ColumnVarNameInTable="columnDuedate" msprop:Generator_ColumnPropNameInRow="Duedate" msprop:Generator_ColumnPropNameInTable="DuedateColumn" msprop:Generator_UserColumnName="Duedate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="typename" msprop:Generator_ColumnVarNameInTable="columntypename" msprop:Generator_ColumnPropNameInRow="typename" msprop:Generator_ColumnPropNameInTable="typenameColumn" msprop:Generator_UserColumnName="typename" type="xs:string" minOccurs="0" />
+              <xs:element name="statusname" msprop:Generator_ColumnVarNameInTable="columnstatusname" msprop:Generator_ColumnPropNameInRow="statusname" msprop:Generator_ColumnPropNameInTable="statusnameColumn" msprop:Generator_UserColumnName="statusname" type="xs:string" minOccurs="0" />
+              <xs:element name="fdate" msprop:Generator_ColumnVarNameInTable="columnfdate" msprop:Generator_ColumnPropNameInRow="fdate" msprop:Generator_ColumnPropNameInTable="fdateColumn" msprop:Generator_UserColumnName="fdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mechname" msprop:Generator_ColumnVarNameInTable="columnmechname" msprop:Generator_ColumnPropNameInRow="mechname" msprop:Generator_ColumnPropNameInTable="mechnameColumn" msprop:Generator_UserColumnName="mechname" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="balance" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:double" minOccurs="0" />
+              <xs:element name="amtpaid" msprop:Generator_ColumnVarNameInTable="columnamtpaid" msprop:Generator_ColumnPropNameInRow="amtpaid" msprop:Generator_ColumnPropNameInTable="amtpaidColumn" msprop:Generator_UserColumnName="amtpaid" type="xs:double" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:double" minOccurs="0" />
+              <xs:element name="taxrate" msprop:Generator_ColumnVarNameInTable="columntaxrate" msprop:Generator_ColumnPropNameInRow="taxrate" msprop:Generator_ColumnPropNameInTable="taxrateColumn" msprop:Generator_UserColumnName="taxrate" type="xs:double" minOccurs="0" />
+              <xs:element name="billto1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtInvoiceDetails" msprop:Generator_UserTableName="dtInvoiceDetails" msprop:Generator_RowEvArgName="dtInvoiceDetailsRowChangeEvent" msprop:Generator_TableVarName="tabledtInvoiceDetails" msprop:Generator_TablePropName="dtInvoiceDetails" msprop:Generator_RowDeletingName="dtInvoiceDetailsRowDeleting" msprop:Generator_RowChangingName="dtInvoiceDetailsRowChanging" msprop:Generator_RowDeletedName="dtInvoiceDetailsRowDeleted" msprop:Generator_RowEvHandlerName="dtInvoiceDetailsRowChangeEventHandler" msprop:Generator_TableClassName="dtInvoiceDetailsDataTable" msprop:Generator_RowChangedName="dtInvoiceDetailsRowChanged" msprop:Generator_RowClassName="dtInvoiceDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ref" msprop:Generator_ColumnVarNameInTable="columnRef" msprop:Generator_ColumnPropNameInRow="Ref" msprop:Generator_ColumnPropNameInTable="RefColumn" msprop:Generator_UserColumnName="Ref" type="xs:int" minOccurs="0" />
+              <xs:element name="Acct" msprop:Generator_ColumnVarNameInTable="columnAcct" msprop:Generator_ColumnPropNameInRow="Acct" msprop:Generator_ColumnPropNameInTable="AcctColumn" msprop:Generator_UserColumnName="Acct" type="xs:string" minOccurs="0" />
+              <xs:element name="Quan" msprop:Generator_ColumnVarNameInTable="columnQuan" msprop:Generator_ColumnPropNameInRow="Quan" msprop:Generator_ColumnPropNameInTable="QuanColumn" msprop:Generator_UserColumnName="Quan" type="xs:double" minOccurs="0" />
+              <xs:element name="fDesc" msprop:Generator_ColumnVarNameInTable="columnfDesc" msprop:Generator_ColumnPropNameInRow="fDesc" msprop:Generator_ColumnPropNameInTable="fDescColumn" msprop:Generator_UserColumnName="fDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="STax" msprop:Generator_ColumnVarNameInTable="columnSTax" msprop:Generator_ColumnPropNameInRow="STax" msprop:Generator_ColumnPropNameInTable="STaxColumn" msprop:Generator_UserColumnName="STax" type="xs:double" minOccurs="0" />
+              <xs:element name="billcode" msprop:Generator_ColumnVarNameInTable="columnbillcode" msprop:Generator_ColumnPropNameInRow="billcode" msprop:Generator_ColumnPropNameInTable="billcodeColumn" msprop:Generator_UserColumnName="billcode" type="xs:string" minOccurs="0" />
+              <xs:element name="staxAmt" msprop:Generator_ColumnVarNameInTable="columnstaxAmt" msprop:Generator_ColumnPropNameInRow="staxAmt" msprop:Generator_ColumnPropNameInTable="staxAmtColumn" msprop:Generator_UserColumnName="staxAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtInvoices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ref" type="xs:int" minOccurs="0" />
+              <xs:element name="custom1" type="xs:string" minOccurs="0" />
+              <xs:element name="customername" type="xs:string" minOccurs="0" />
+              <xs:element name="locname" type="xs:string" minOccurs="0" />
+              <xs:element name="billto" type="xs:string" minOccurs="0" />
+              <xs:element name="fdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="po" type="xs:string" minOccurs="0" />
+              <xs:element name="termsText" type="xs:string" minOccurs="0" />
+              <xs:element name="taxregion" type="xs:string" minOccurs="0" />
+              <xs:element name="Duedate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="typename" type="xs:string" minOccurs="0" />
+              <xs:element name="statusname" type="xs:string" minOccurs="0" />
+              <xs:element name="fdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mechname" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="balance" type="xs:double" minOccurs="0" />
+              <xs:element name="amtpaid" type="xs:double" minOccurs="0" />
+              <xs:element name="total" type="xs:double" minOccurs="0" />
+              <xs:element name="taxrate" type="xs:double" minOccurs="0" />
+              <xs:element name="Acct" type="xs:string" minOccurs="0" />
+              <xs:element name="Quan" type="xs:string" minOccurs="0" />
+              <xs:element name="ifDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" type="xs:string" minOccurs="0" />
+              <xs:element name="iAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="iSTax" type="xs:string" minOccurs="0" />
+              <xs:element name="billcode" type="xs:string" minOccurs="0" />
+              <xs:element name="staxAmt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstInvoices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="fDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Tag" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="PO" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="Balance" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBills">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="fDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="fDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" type="xs:string" minOccurs="0" />
+              <xs:element name="Vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="StatusName" type="xs:string" minOccurs="0" />
+              <xs:element name="Batch" type="xs:string" minOccurs="0" />
+              <xs:element name="Terms" type="xs:string" minOccurs="0" />
+              <xs:element name="PO" type="xs:string" minOccurs="0" />
+              <xs:element name="TRID" type="xs:string" minOccurs="0" />
+              <xs:element name="Spec" type="xs:string" minOccurs="0" />
+              <xs:element name="IDate" type="xs:string" minOccurs="0" />
+              <xs:element name="UseTax" type="xs:string" minOccurs="0" />
+              <xs:element name="Disc" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="Due" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtAPAging">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PJID" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorID" type="xs:string" minOccurs="0" />
+              <xs:element name="Vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="fDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Due" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="fDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="DueIn" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="SevenDay" type="xs:string" minOccurs="0" />
+              <xs:element name="ThirtyDay" type="xs:string" minOccurs="0" />
+              <xs:element name="SixtyDay" type="xs:string" minOccurs="0" />
+              <xs:element name="SixtyOneDay" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtARAging">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cid" type="xs:string" minOccurs="0" />
+              <xs:element name="locid" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="LocName" type="xs:string" minOccurs="0" />
+              <xs:element name="fDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Due" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="fDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="SevenDay" type="xs:string" minOccurs="0" />
+              <xs:element name="ThirtyDay" type="xs:string" minOccurs="0" />
+              <xs:element name="SixtyDay" type="xs:string" minOccurs="0" />
+              <xs:element name="SixtyOneDay" type="xs:string" minOccurs="0" />
+              <xs:element name="DueIn" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="NintyDay" type="xs:string" minOccurs="0" />
+              <xs:element name="NintyOneDay" type="xs:string" minOccurs="0" />
+              <xs:element name="ZeroThirtyDay" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
