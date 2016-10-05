@@ -1,0 +1,268 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.master" AutoEventWireup="true"
+    CodeFile="Customers.aspx.cs" Inherits="Customers" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div>
+        <div class="title_bar">
+            <asp:Label CssClass="title_text" ID="lblHeader" runat="server">Customers</asp:Label>
+                      <div id="divSpace"  class="Close_button"></div>
+            <asp:LinkButton ID="lnkSyncQB" CssClass="buttons" runat="server" 
+                onclick="lnkSyncQB_Click" Visible="False" >Sync with QB</asp:LinkButton>
+                <asp:LinkButton ID="lnkPrint" runat="server" CausesValidation="true" Height="16px"
+           Visible="true" Style="float: left"  OnClick="lnkPrint_Click">
+                          <img alt="Print" src="images/print.png" height="23px" width="23px" title="Print"/>
+        </asp:LinkButton>
+            <asp:LinkButton  ID="lnkClose" runat="server" CausesValidation="false" CssClass="buttons"
+                OnClick="lnkClose_Click">Close</asp:LinkButton>                
+        </div>
+        <table width="100%">           
+            <tr>
+                <td>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td align="center">                                
+                            <asp:Label ID="lblMsg" CssClass="lblMsg" runat="server" ForeColor="#CC0000"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <table>
+                                            <tr>
+                                                <td class="register_lbl">
+                                                    Search for customers where
+                                                </td>
+                                                <td >
+                                                    <asp:DropDownList ID="ddlSearch" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlSearch_SelectedIndexChanged"
+                                                        CssClass="register_input_bg_ddl_small">
+                                                        <asp:ListItem>Select</asp:ListItem>
+                                                        <asp:ListItem Value="name">Name</asp:ListItem>
+                                                        <asp:ListItem Value="Address">Address</asp:ListItem>
+                                                        <asp:ListItem Value="o.Status">Status</asp:ListItem>
+                                                        <asp:ListItem Value="o.type">Type</asp:ListItem>
+                                                        <asp:ListItem Value="City">City</asp:ListItem>
+                                                        <asp:ListItem Value="Phone">Phone</asp:ListItem>
+                                                        <asp:ListItem Value="Website">Website</asp:ListItem>
+                                                        <asp:ListItem Value="Email">Email</asp:ListItem>
+                                                        <asp:ListItem Value="Cellular">Cellular</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                    
+                                                </td>
+                                                <td>
+                                                <asp:TextBox ID="txtSearch" runat="server" CssClass="register_input_bg_small"></asp:TextBox>
+                                                    <asp:DropDownList ID="rbStatus" runat="server" Visible="False" CssClass="register_input_bg_ddl_small">
+                                                        <asp:ListItem Value="0">Active</asp:ListItem>
+                                                        <asp:ListItem Value="1">Inactive</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                    <asp:DropDownList ID="ddlUserType" runat="server" CssClass="register_input_bg_ddl_small"
+                                                        Visible="False">                                                       
+                                                    </asp:DropDownList>
+                                                </td>
+                                                <td>
+                                                    &nbsp;</td>
+                                                <td>
+                                                    <asp:ImageButton ID="lnkSearch" runat="server" ImageUrl="images/search.png" 
+                                                        OnClick="lnkSearch_Click" ToolTip="Search" />
+                                                </td>
+                                                <td width="20px">
+                                                    &nbsp;</td>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkClear" runat="server" onclick="lnkClear_Click">Clear</asp:LinkButton>
+                                                </td>
+                                                <td width="20px">
+                                                    &nbsp;</td>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkShowAll" runat="server" OnClick="lnkShowAll_Click">Show All Customers</asp:LinkButton>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                </td>
+                                                <td>
+                                                    
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblRecordCount" runat="server" Style="font-style: italic;"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    &nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <asp:Panel runat="server" ID="pnlGridButtons" style="border-style: solid solid none solid; background-position: #B8E5FC; background: #B8E5FC;
+                            width: 1398px; height: 25px; color: #23AEE8; font-weight: bold; font-size: 12px;
+                            padding-top: 5px; border-width: 1px; border-color: #a9c6c9;">
+                            <asp:LinkButton Style="float: left; color: #2382B2; margin-right: 20px; margin-left: 10px;"
+                                ID="btnEdit" runat="server" OnClick="btnSubmit_Click">Edit</asp:LinkButton>
+                            <asp:LinkButton Style="float: left; color: #2382B2; margin-right: 20px;" ID="btnCopy"
+                                runat="server" OnClick="btnCopy_Click">Copy</asp:LinkButton>
+                            <asp:LinkButton Style="float: left; color: #2382B2; margin-right: 20px;" ID="btnDelete"
+                                runat="server" OnClick="btnDelete_Click" OnClientClick="return SelectedRowDelete('ctl00_ContentPlaceHolder1_gvUsers','customer');">Delete</asp:LinkButton>
+                            <asp:LinkButton Style="float: left; color: #2382B2; margin-right: 20px;" ID="lnkAddnew"
+                                runat="server" OnClick="lnkAddnew_Click">Add New</asp:LinkButton>
+                        </asp:Panel>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="lnkSearch" />
+                                <asp:AsyncPostBackTrigger ControlID="lnkShowall" />
+                            </Triggers>
+                            <ContentTemplate>
+                                <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="False" OnRowCommand="gvUsers_RowCommand"
+                                    CssClass="altrowstable" OnRowDataBound="gvUsers_RowDataBound" DataKeyNames="ID"
+                                    Width="1400px" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="gvUsers_PageIndexChanging"
+                                    OnSorting="gvUsers_Sorting" PageSize="20" ShowFooter="True" 
+                                    OnDataBound="gvUsers_DataBound">
+                                    <RowStyle CssClass="evenrowcolor" />
+                                    <FooterStyle CssClass="footer" />
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:HiddenField ID="hdnSelected" runat="server" />
+                                                <asp:CheckBox ID="chkSelect" runat="server" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="ID" Visible="False">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblId" runat="server" Text='<%# Bind("id") %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Name" SortExpression="name" HeaderStyle-Width="130px">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblName" runat="server"><%#Eval("name")%></asp:Label>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                <asp:Label ID="lblTotal" runat="server">Total</asp:Label>
+                                            </FooterTemplate>
+                                            <HeaderStyle Width="200px" />
+                                            <FooterStyle Width="200px" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Address" SortExpression="address" HeaderStyle-Width="180px">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblAddress" runat="server"><%#Eval("address")%></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Width="200px" />
+                                            <FooterStyle Width="200px" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Type" SortExpression="Type" HeaderStyle-Width="100px">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblType" runat="server"><%#Eval("Type")%></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Width="100px" />
+                                            <FooterStyle Width="100px" />
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="City" SortExpression="City" >
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblCity" runat="server"><%#Eval("City")%></asp:Label>
+                                            </ItemTemplate> 
+                                               <HeaderStyle Width="150px" />
+                                            <FooterStyle Width="150px" />                                   
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Phone" SortExpression="Phone" >
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblPhone" runat="server"><%#Eval("Phone")%></asp:Label>
+                                            </ItemTemplate>
+                                               <HeaderStyle Width="150px" />
+                                            <FooterStyle Width="150px" />                                           
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Website" SortExpression="Website" Visible="false" >
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblWebsite" runat="server"><%#Eval("Website")%></asp:Label>
+                                            </ItemTemplate>                                           
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Email" SortExpression="Email" Visible="false" >
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblEmail" runat="server"><%#Eval("Email")%></asp:Label>
+                                            </ItemTemplate>                                           
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Cellular" SortExpression="Cellular"  Visible="false">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblCellular" runat="server"><%#Eval("Cellular")%></asp:Label>
+                                            </ItemTemplate>
+                                             <HeaderStyle Width="150px" />
+                                            <FooterStyle Width="150px" />                                                
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Status" SortExpression="status">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblStatus" runat="server"><%# Convert.ToInt32( Eval("status")) == 0 ? "Active" : "Inactive"%></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="# of locations" SortExpression="loc">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbllocs" runat="server"><%#Eval("loc")%></asp:Label>
+                                            </ItemTemplate>
+                                               <FooterTemplate>
+                                                <asp:Label ID="lblLocsTotal" runat="server"></asp:Label>
+                                            </FooterTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="# of Equipments" SortExpression="equip">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblequip" runat="server"><%#Eval("equip")%></asp:Label>
+                                            </ItemTemplate>
+                                             <FooterTemplate>
+                                                <asp:Label ID="lblequipTotal" runat="server"></asp:Label>
+                                            </FooterTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="# of calls" SortExpression="opencall">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblopencall" runat="server"><%#Eval("opencall")%></asp:Label>
+                                            </ItemTemplate>
+                                               <FooterTemplate>
+                                                <asp:Label ID="lblopencallTotal" runat="server"></asp:Label>
+                                            </FooterTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Balance" SortExpression="Balance">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblBalance" runat="server" Text='<%#Eval("Balance")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                <asp:Label ID="lblBalanceTotal" runat="server"></asp:Label>
+                                            </FooterTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <SelectedRowStyle CssClass="selectedrowcolor" />
+                                    <AlternatingRowStyle CssClass="oddrowcolor" />
+                                    <PagerTemplate>
+                                        <div align="center">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument="First" ImageUrl="images/first.png" />
+                                            &nbsp &nbsp<asp:ImageButton ID="ImageButton2" runat="server" CommandArgument="Prev"
+                                                ImageUrl="~/images/Backward.png" />
+                                            &nbsp &nbsp <span>Page</span>
+                                            <asp:DropDownList ID="ddlPages" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlPages_SelectedIndexChanged">
+                                            </asp:DropDownList>
+                                            <span>of </span>
+                                            <asp:Label ID="lblPageCount" runat="server"></asp:Label>
+                                            &nbsp &nbsp
+                                            <asp:ImageButton ID="ImageButton3" runat="server" CommandArgument="Next" ImageUrl="images/Forward.png" />
+                                            &nbsp &nbsp
+                                            <asp:ImageButton ID="ImageButton4" runat="server" CommandArgument="Last" ImageUrl="images/last.png" />
+                                        </div>
+                                    </PagerTemplate>
+                                </asp:GridView>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+</asp:Content>
